@@ -1,0 +1,48 @@
+header{
+  overflow: hidden;
+}
+#header{
+  text-align: center;
+  height: 60px;
+}
+#logo{
+  float: left;
+  padding: none;
+  margin: none;
+  height: 60px;
+  width: 30%;
+}
+#logo img{
+  width: 60%;
+  float: none;
+  padding: 10px 0px;
+}
+html, body{
+  height: 100%;
+}
+body{
+  margin: 0px;
+  padding: 0px;
+  background: #FFFFFF;
+  font-family: 'Roboto';
+  font-size: 13px;
+}
+h1, h2, h3{
+  margin: 0;
+  padding: 0;
+  color: #404040
+}
+p, ol, ul{
+  margin-top: 0;
+}
+p{
+  line-height: 100%;
+}
+ol, ul{
+  padding: 0;
+  list-style: none;
+}
+.container{
+  margin: 0px auto;
+  width: 1200px;
+}
