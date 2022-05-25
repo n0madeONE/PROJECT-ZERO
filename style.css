@@ -80,19 +80,19 @@ img {
   .nav {
     justify-content: center;
   }
-  .nav-list {
+.nav-list {
     margin: 0 1rem;
   }
 }
-  .nav-list a {
+.nav-list a {
     display: block;
     font-size: 2.2rem;
     padding: 2rem;
   }
-  .nav-list a:hover {
+.nav-list a:hover {
     background: var(--main-blue);
   }
-  .welcome-section {
+.welcome-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -102,28 +102,28 @@ img {
     background-color: #202020;
     background-image: linear-gradient(-62deg , #3a3d40 0%, #181719 100%);
   }
-  .welcome-section > p {
+.welcome-section > p {
     font-size: 3rem;
     font-weight: 200;
     font-style: italic;
     color: var(--main-red)
   }
-  .services-section {
+.services-section {
     text-align: center;
     padding: 10rem 2rem;
     background: var(--main-blue)
   }
-  .services-section-header {
+.services-section-header {
     max-width: 640px;
     margin: 0 auto 6rem auto;
     border-bottom: 0.2rem solid var(--main-white);
   }
-  @media (max-width: 28.75em) {
-    .services-section-header {
+@media (max-width: 28.75em) {
+  .services-section-header {
       font-size: 4rem;
     }
   }
-  .services-grid {
+.service-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-gap: 4rem;
@@ -132,17 +132,30 @@ img {
     margin: 0 auto;
     margin-bottom: 6rem;
   }
-  @media (max-width: 30.625em) {
-    .services-section {
+@media (max-width: 30.625em) {
+  .services-section {
       padding: 6rem 1rem;
     }
   .services-grid {
     grid-template-columns: 1fr;
   }
 }
-.our-services {
+.services {
   background: var(--main-grey);
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+}
+.code {
+  color: var(--main-grey);
+  transition: color 0.3s ease-out;
+}
+.service:hover .code {
+  color: #ff7f50;
+}
+.service-image {
+  height: calc(100% - 6.8rem);
+  width: 100%;
+  object-fit: cover;
 }
 .container {
   margin: 0px auto;
