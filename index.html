@@ -2,21 +2,22 @@
 <!DOCTYPE html>
 <head>
   <html lang="en">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/bc2fda2341.js" crossorigin="anonymous"></script>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project Zero</title>
-  <link rel="icon" href="images/halflife.png">
-  <link rel="stylesheet" href="style.css">
+  <title>Hyades Corporation</title>
+  <link rel="icon" href="images/n-logo-white.png">
 </head>
 <header>
   <!--<div>
     <div id="logo">
-      <img src="images/halflife.png" style="width:300px; height:300px;"/> <!--Remember if u want to change the size of an img u can do it with a style like above-->
+      <img src="images/halflife.png" style="width:300px; height:300px;"/> Remember if u want to change the size of an img u can do it with a style like above-->
     <!--</div>-->
     <!--NAV START-->
     <nav id="navbar" class="nav">
-      <ul id="nav-list">
+      <ul class="nav-list"> <!--So I made a mistake bc I put ID instead of class so keep an EYE on that.-->
         <li>
           <a href="#welcome-section">About us</a>
         </li>
@@ -24,9 +25,12 @@
           <a href="#services">Services</a>
         </li>
         <li>
-          <a href="#contact">Contact us</a>
+          <a href="#contact">Contact</a>
         </li>
       </ul>
+      <div id="logo">
+        <img src="images/n-logo.png">
+      </div>
     </nav>
     <!--NAV END-->
 </header>
@@ -36,100 +40,147 @@
         <h1>Hyades Corporation</h1>
         <p>We will improve your future</p>
       </section>
-      <div class="service-grid">
-        <a 
-        href="https://www.military.com/special-operations/delta-force.html" target="_blank" class="services-tile">
-      </a>
-      <section> 
-        <h2 class="services">Our services</h2>
-        <a 
+      <!--SERVICES START-->
+      <section id="services" class="services-section"> 
+        <h2 class="services-section-header">Here you can see some of our services</h2>
+      <div class="services-grid">
+      <a 
         href="https://en.wikipedia.org/wiki/SEAL_Team_Six"
         target="_blank"
         class="service service-tile"
         >
         <img
         class="service-image"
-        src="https://3.imimg.com/data3/FH/HM/MY-6397903/armed-security-guards-500x500.jpg"
-        alt="services">
-        <p>
+        src="https://cdnb.artstation.com/p/assets/images/images/004/140/439/large/stefan-celic-likovi33.jpg?1480711973"
+        >
+        <p class="service-title">
           <span class="code">&lt;</span>
           Close Security Protection
           <span class="code">&gt;</span>
-      </p>
-    </a>
-        <a
+        </p>
+      </a>
+      <a 
+      href="#"
+      target="_blank"
+      class="service service-tile"
+      >
+      <img
+      class="service-image"
+      src="https://cdna.artstation.com/p/assets/images/images/042/891/320/large/encho-enchev-military-truck-2021s.jpg?1635745498"
+      >
+      <p class="service-title">
+        <span class="code">&lt;</span>
+        Armored Vehicle Transport
+        <span class="code">&gt;</span>
+        </p>
+      </a>
+      <a
         href="https://www.cisa.gov/cybersecurity"
         target="_blank"
         class="service service-tile"
         >
         <img 
         class="service-image"
-        src="https://federallabs.org/sites/default/files/field/image/cisa_logo.jpg"
-        alt="services">
-        <p>
+        src="https://cdnb.artstation.com/p/assets/images/images/025/952/361/large/zach-gainer-wwb-portfolio-0009-wwb-bottomline-copy-10.jpg?1587437330"
+        >
+        <p class="service-title">
           <span class="code">&lt;</span>
           Cybersecurity Protection
           <span class="code">&gt;</span>
         </p>
     </a>
-        <a 
+      <a 
         href="https://www.military.com/special-operations/  army-special-forces-training.html"
         target="_blank"
         class="service service-tile"
         >
         <img 
         class="service-image"
-        src="https://www.thephuketnews.com/photo/listing/2021/  1633669927_1-org.jpg"
-        alt="services">
-        <p>
-        <span class="code">&lt;</span>
-        Special Forces Training
-        <span class="code">&gt;</span>
+        src="https://previews.123rf.com/images/zabelin/zabelin1510/zabelin151000088/46188938-spec-ops-oficiales-de-polic%C3%ADa-swat-en-negro-uniforme-y-la-cara-estudio-de-la-m%C3%A1scara-tiro.jpg"
+        >
+        <p class="service-title">
+          <span class="code">&lt;</span>
+          Special Forces Training
+          <span class="code">&gt;</span>
         </p>
     </a>
-        <a 
+      <a 
         href="https://en.wikipedia.org/wiki/  United_States_Army_Basic_Training"
         target="_blank"
         class="service service-tile"
         >
         <img 
         class="service-image"
-        src="https://www.shorturl.at/dAOW8"
-        alt="services">
-        <p>
-        <span class="code">&lt;</span>
-        Special Combat Training
-        <span class="code">&gt;</span>
+        src="https://images03.military.com/sites/default/files/styles/full/public/2018-04/urban-training-1800.jpg"
+        >
+        <p class="service-title">
+          <span class="code">&lt;</span>
+          CQC Training
+          <span class="code">&gt;</span>
         </p>
     </a>
+  </a>
+  <a 
+    href="https://en.wikipedia.org/wiki/  United_States_Army_Basic_Training"
+    target="_blank"
+    class="service service-tile"
+    >
+    <img 
+    class="service-image"
+    src="https://i.blogs.es/4879f1/hacking/450_1000.jpg"
+    >
+    <p class="service-title">
+      <span class="code">&lt;</span>
+      Coding/Ethical Hack
+      <span class="code">&gt;</span>
+    </p>
+</a>
   </div>
+  <a
+    href="#"
+    class="btn btn-show-more"
+    target="_blank"
+    >Show more<i class="fas fa-chevron-right"></i
+  ></a>
     </section>
-      <section>
-        <h2>Contact us</h2>
-        <form action="">
-          <fieldset> <!--Remember this is how it goes the elemnt fieldset-->
-            <legend>You want to buy directly or contact us?</legend>
-            <label><input type="radio" id="buy" name="buy-contact" value="buy" checked> Buy</label>
-            <label><input type="radio" id="contact" name="buy-contact" value="contact"> Contact</label>
-          </fieldset>
-          <!--Remember that fieldset is to make one of those rectangles-->
-          <fieldset>
-            <legend>What languages you speak?</legend>
-            <input type="checkbox" id="english" name="languages" value="english" checked>
-            <label for="english">English</label>
-            <input type="checkbox" id="spanish" name="languages" value="spanish">
-            <label for="spanish">Spanish</label>
-            <input type="checkbox" id="french" name="languages" value="french">
-            <label for="french">French</label>
-          </fieldset>
-          <input type="text" name="contactus" placeholder="Your email in here" required>
-          <button type="submit">Send</button>
-        </form>
-      </section>
-    </main>
+  </main>
+  <!--CONTACT SECTION-->
+  <section id="contact" class="contact-section">
+    <div class="contact-section-header">
+      <h2>Start a job with us...</h2>
+      <p>We will love working with you</p>
+    </div>
+    <div class="contact-links">
+      <a
+      id="profile-link"
+      href="https://github.com/n0madevc"
+      target="_blank"
+      class="btn contact-details"
+      ><i class="fab fa-github"></i> Github</a
+      >
+      <a
+      href="/cdn-cgi/l/email-protection#0d68756c607d61684d68756c607d6168236e6260"
+      target="_blank"
+      class="btn contact-details"
+      ><i class="fa-solid fa-paper-plane"></i> Email us</a
+      >
+      <a
+      href="tel:555-555-5555"
+      target="_blank"
+      class="btn contact-details"
+      ><i class="fa-solid fa-phone"></i> Call us</a
+      >
+  </div>
+  </section>
+  <!--END CONTACT SECTION-->
     <footer>
-      <p>All rights reserved - <a href="https://github.com/n0madevc">Hyades Corp.</a></p> <!--Sometime u should update this thing when we build the real website :D-->
+      <p>
+        *This is just a fake website. All the services and contact given are not real/accurate to real life.
+      </p>
+      <p>
+        &copy; Created by
+        <a href="https://github.com/n0madevc" target="_blank">n0madevc <i class="fa-solid fa-user-secret"></i></a>
+      </p>
     </footer>
-  
-  </body>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
 </html>

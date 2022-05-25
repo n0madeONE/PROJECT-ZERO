@@ -1,13 +1,28 @@
 /*Custom colors for later*/
 :root {
-  --main-blue: #45567d;
+  --main-blue: #222e49;
   --main-red: #be3144;
   --main-white: #f0f0f0;
-  --main-grey: #303841;
+  --main-grey: #363636;
 }
-/*Base start*/
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   box-sizing: border-box;
+
+  /* Set font size for easy rem calculations
+   * default document font size = 16px, 1rem = 16px, 100% = 16px
+   * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
+  */
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
@@ -26,11 +41,6 @@ html {
     font-size: 55%;
   }
 }
- /* Set font size for easy rem calculations
-   * default document font size = 16px, 1rem = 16px, 100% = 16px
-   * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
-  */
-
 /*Base styles*/
 body {
   font-family: Poppins, sans-serif;
@@ -61,6 +71,19 @@ img {
   display: block;
   width: 100%;
 }
+  /*LOGO*/
+#logo{
+  width: 100px;
+  display: inline-flex;
+}
+#logo img{
+  /*Remember to put this element outside of @media!*/
+  position:absolute; left: 25px; bottom: 1.2rem;
+  width: 45px;
+  height: 45px;
+}
+  /*LOGO END*/
+/*NAV*/
 .nav {
   display: flex;
   justify-content: flex-end;
@@ -68,9 +91,9 @@ img {
   top: 0;
   left: 0;
   width: 100%;
-  background: var(--main-red)
-  box-shadow 0 2px 0 rgba(0, 0, 0, 0.4)
-  z-index 1;
+  background: var(--main-red);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+  z-index: 10;
 }
 .nav-list {
   display: flex;
@@ -99,48 +122,54 @@ img {
     align-items: center;
     width: 100%;
     height: 100vh;
-    background-color: #202020;
-    background-image: linear-gradient(-62deg , #3a3d40 0%, #181719 100%);
+    background-image: url("https://coolwallpaper-hd.com/wp-content/uploads/2021/01/Wallpapers-Dark-Aesthetic.jpg");
+    background-color: #cccccc;
   }
 .welcome-section > p {
     font-size: 3rem;
     font-weight: 200;
     font-style: italic;
-    color: var(--main-red)
+    color: var(--main-red);
   }
+  /*SERVICES SECTION*/
 .services-section {
     text-align: center;
     padding: 10rem 2rem;
-    background: var(--main-blue)
+    background: var(--main-blue);
   }
 .services-section-header {
     max-width: 640px;
     margin: 0 auto 6rem auto;
     border-bottom: 0.2rem solid var(--main-white);
   }
-@media (max-width: 28.75em) {
-  .services-section-header {
+  
+  @media (max-width: 28.75em) {
+    .services-section-header {
       font-size: 4rem;
     }
   }
-.service-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    grid-gap: 4rem;
-    width: 100%;
-    max-width: 1280px;
-    margin: 0 auto;
-    margin-bottom: 6rem;
-  }
+
+/* "Automagic" image grid using no media queries */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 4rem;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+
 @media (max-width: 30.625em) {
   .services-section {
       padding: 6rem 1rem;
     }
+    
   .services-grid {
     grid-template-columns: 1fr;
   }
 }
-.services {
+.service {
   background: var(--main-grey);
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   border-radius: 2px;
@@ -157,7 +186,86 @@ img {
   width: 100%;
   object-fit: cover;
 }
-.container {
-  margin: 0px auto;
-  width: 1200px;
+.service-title {
+  font-size: 2rem;
+  padding: 2rem 0.5rem;
+}
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 2px;
+}
+.btn-show-more {
+  font-size: 2rem;
+  background: var(--main-red);
+  transition: background 0.3s ease-out;
+}
+.btn-show-more:hover {
+  background: var(--main-red)
+}
+.btn-show-more:hover > i {
+  margin-left: 10px;
+  transform: translateX(0);
+  transition: transform 0.3s ease-out;
+}
+/*CONTACT SECTION*/
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 80vh;
+  padding: 0 2rem;
+  background: var(--main-grey);
+}
+.contact-section-header > h2 {
+  font-size: 6rem;
+}
+@media (max-width: 28.75em) {
+  .contact-section-header > h2 {
+    font-size: 4rem;
+  }
+}
+
+.contact-section-header > p {
+  font-style: italic;
+}
+.contact-links {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 900px;
+  margin-top: 4rem;
+  flex-wrap: wrap;
+}
+.contact-details {
+  font-size: 2.4rem;
+  text-shadow: 2px 2px 1px #1f1f1f;
+  transition: transform 0.3s ease-out;
+}
+.contact-details:hover {
+  transform: translateY(8px);
+}
+/*FOOTER*/
+footer {
+  font-weight: 300;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2rem;
+  background-color: var(--main-grey);
+  border-top: 4px solid var(--main-red);
+}
+footer > p {
+  margin: 2rem;
+}
+footer i {
+  vertical-align: middle;
+}
+@media (max-width: 28.75em) {
+  footer{
+    flex-direction: column;
+    text-align: center;
+  }
 }
